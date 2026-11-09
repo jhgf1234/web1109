@@ -11,7 +11,11 @@
 <script>
 var item = document.getElementById("item");
 var count = document.getElementById("count");
-
+function del()
+{
+	seddionstorage.clear();
+	alert("세션스토리지를 모두 삭제하였습니다.");
+}
 function store() { // e는 이벤트 객체
 	if(!window.sessionStorage) {
 		alert("세션 스토리지를 지원하지 않습니다.");
