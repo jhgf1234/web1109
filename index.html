@@ -21,11 +21,9 @@
          }
         function SetCookie(name,val,expireDate)
         {
-               let cookieStr = name + "=" + escape(value);
-               if(expireDate== null);
-                expireDate="";
-                else
-                expireDate = ";expires="+expireDate.toUTCString();
+               var let cookieStr = name + "=" + escape(value) +
+               ((expireDate== null)?"":(";expires= + expireDate.toGMYString()));
+               
             document.cookie = cookieStr; 
         }
     </script>
